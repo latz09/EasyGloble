@@ -5,11 +5,11 @@ import matter from 'gray-matter';
 import Link from 'next/link';
 
 const cryptoCurrency = ({ articles }) => {	
-
+const article = (articles[0].slug)
 	return (
 		<div className='text-center mt-14'>
 			<h1>Crypto page</h1>
-			{/* <Link href={`/articles/${article}`}>article</Link> */}
+			<Link href={`/articles/crypto-articles/${article}`}>article</Link>
 		</div>
 	);
 };

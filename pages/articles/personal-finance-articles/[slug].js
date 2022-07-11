@@ -6,13 +6,13 @@ import { marked } from 'marked';
 const ArticlesPage = ({ frontmatter, slug, content }) => {
 	return (
 		<div>
-			<h1>article page</h1>
+			<h1>personal finance article page</h1>
 		</div>
 	);
 };
 
 export async function getStaticPaths() {
-	const files = fs.readdirSync(path.join('articles'));
+	const files = fs.readdirSync(path.join('articles/personal-finance-articles'));
 
 	const paths = files.map((filename) => ({
 		params: {
@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params: { slug } }) {
 	const markdownWithMeta = fs.readFileSync(
-		path.join('articles', slug + '.md'),
+		path.join('articles/personal-finance-articles', slug + '.md'),
 		'utf-8'
 	);
 	const { data: frontmatter, content } = matter(markdownWithMeta);

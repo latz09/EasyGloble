@@ -9,10 +9,10 @@ const FullNav = () => {
 					<AiFillHome />
 				</a>
 			</Link>
-			<Link href={'cryptocurrency'}>
+			<Link href={'/cryptocurrency'}>
 				<a className="nav-link">CRYPTO CURRENCY</a>
 			</Link>
-			<Link href={'personal-finance'}>
+			<Link href={'/personal-finance'}>
 				<a className="nav-link">PERSONAL FINANCE</a>
 			</Link>
 		</div>
