@@ -3,7 +3,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiFillHome } from 'react-icons/ai';
 
 const DropDownNav = ({ setToggleNav, toggleNav }) => {
-	console.log(toggleNav);
+	
 	return (
 		<div className='flex space-x-5 text-2xl'>
 			{' '}
