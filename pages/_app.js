@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<FeaturedProvider>
 			<Layout>
-				<div className='px-7 mx-auto'>
+				<div className='sm:px-7 max-w-7xl mx-auto'>
 					<Component {...pageProps} />
 				</div>
 			</Layout>

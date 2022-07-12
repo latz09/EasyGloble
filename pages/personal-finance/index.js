@@ -1,11 +1,15 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import Heading from '../../components/utils.js/Heading';
+import { useContext } from 'react';
+import { FeaturedContext } from '../../components/contexts/FeaturedContext';
+import Heading from '../../components/utils/Heading';
 import SelectedCategoryArticles from '../../components/articles/article-layouts/SelectedCategoryArticles';
-import SideArticles from '../../components/articles/article-layouts/SideArticles';
+import FeaturedArticles from '../../components/articles/article-layouts/FeaturedArticles';
 
 const PersonalFinance = ({ articles }) => {
+	const {featuredArticles} = useContext(FeaturedContext);
+	
 	return (
 		<>
 			<Heading title='Personal Finance' />
@@ -14,7 +18,7 @@ const PersonalFinance = ({ articles }) => {
 					<SelectedCategoryArticles articles={articles} />
 				</div>
 				<div>
-					<SideArticles />
+					<FeaturedArticles featuredArticles={featuredArticles} />
 				</div>
 			</div>
 		</>

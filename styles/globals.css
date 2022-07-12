@@ -10,7 +10,7 @@
 		@apply bg-globleBlue-500 text-sm font-medium p-2 text-white place-self-start rounded hover:opacity-80 transition duration-500 cursor-pointer;
 	}
   .markdown-content {
-    @apply  prose-headings:font-medium  prose-headings:text-gray-700 text-lg text-gray-600 tracking-wide
+    @apply  prose-headings:font-medium  prose-headings:text-gray-700 sm:text-lg text-gray-600 tracking-wide px-2 sm:px-0
   }
 
 }

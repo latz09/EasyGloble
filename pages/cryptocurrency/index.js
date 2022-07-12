@@ -2,32 +2,28 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import SelectedCategoryArticles from '../../components/articles/article-layouts/SelectedCategoryArticles';
-import SideArticles from '../../components/articles/article-layouts/SideArticles';
-import Heading from '../../components/utils.js/Heading';
+import FeaturedArticles from '../../components/articles/article-layouts/FeaturedArticles';
+import Heading from '../../components/utils/Heading';
 import { useEffect, useContext } from 'react';
 import { FeaturedContext } from '../../components/contexts/FeaturedContext';
 
 const CryptoCurrency = ({ articles }) => {
 	const { featuredArticles, setFeaturedArticles } = useContext(FeaturedContext);
-	useEffect(() => {
-	  setFeaturedArticles(articles)
-	}, [articles, setFeaturedArticles])
-
-	console.log(featuredArticles)
 	
+	useEffect(() => { 
+		setFeaturedArticles(articles);
+	}, [articles, setFeaturedArticles]);
 
-
-	
 	return (
 		<>
 			{' '}
 			<Heading title='Crypto Currency' />
 			<div className='grid gap-3 lg:grid-cols-3 mt-4'>
-				<div className='col-span-2'>
+				<div className='lg:col-span-2'>
 					<SelectedCategoryArticles articles={articles} />
 				</div>
 				<div>
-					<SideArticles />
+					<FeaturedArticles featuredArticles={featuredArticles} />
 				</div>
 			</div>
 		</>
