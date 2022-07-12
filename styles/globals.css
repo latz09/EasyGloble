@@ -3,9 +3,16 @@
 @tailwind utilities;
 
 @layer components {
-  .nav-link {
-    @apply p-3 hover:bg-blue-400 hover:text-white  transition duration-700
+	.nav-link {
+		@apply p-3 hover:bg-blue-400 hover:text-white  transition duration-700;
+	}
+	.article-link {
+		@apply bg-globleBlue-500 text-sm font-medium p-2 text-white place-self-start rounded hover:opacity-80 transition duration-500 cursor-pointer;
+	}
+  .markdown-content {
+    @apply  prose-headings:font-medium  prose-headings:text-gray-700 text-lg text-gray-600 tracking-wide
   }
+
 }
 
 /* html,

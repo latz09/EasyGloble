@@ -8,13 +8,13 @@ module.exports = {
 		extend: {
 			colors: {
 				globleBlue: {
-					500: '#0184D0'
+					500: '#0184D0',
 				},
 				globleBlack: {
-					500: '#232323'
-				}
-			}
+					500: '#232323',
+				},
+			},
 		},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/typography')],
 };

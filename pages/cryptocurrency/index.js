@@ -1,15 +1,23 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-
-import Link from 'next/link';
 import SelectedCategoryArticles from '../../components/articles/article-layouts/SelectedCategoryArticles';
 import SideArticles from '../../components/articles/article-layouts/SideArticles';
-import Category from '../../components/utils.js/Category';
 import Heading from '../../components/utils.js/Heading';
+import { useEffect, useContext } from 'react';
+import { FeaturedContext } from '../../components/contexts/FeaturedContext';
 
-const cryptoCurrency = ({ articles }) => {
-	// const article = articles[0].slug;
+const CryptoCurrency = ({ articles }) => {
+	const { featuredArticles, setFeaturedArticles } = useContext(FeaturedContext);
+	useEffect(() => {
+	  setFeaturedArticles(articles)
+	}, [articles, setFeaturedArticles])
+
+	console.log(featuredArticles)
+	
+
+
+	
 	return (
 		<>
 			{' '}
@@ -53,8 +61,4 @@ export async function getStaticProps() {
 	};
 }
 
-export default cryptoCurrency;
-
-{
-	/* <Link href={`/articles/crypto/${article}`}>article</Link> */
-}
+export default CryptoCurrency;

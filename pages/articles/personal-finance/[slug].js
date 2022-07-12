@@ -2,13 +2,37 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
+import ArticleImage from '../../../components/articles/ArticleImage';
+import ArticleLink from '../../../components/utils.js/ArticleLink';
+import ArticleTitle from '../../../components/articles/ArticleTitle';
+import Details from '../../../components/articles/Details';
 
 const ArticlesPage = ({ frontmatter, slug, content }) => {
     
 	return (
+		<div className='grid shadow w-2/3 p-6 2xl:mx-28'>
 		<div>
-			<h1>personal finance article page</h1>
+			<ArticleImage
+				src={frontmatter.cover_image}
+				alt=''
+				height={340}
+				width={640}
+			/>
+			<div className='grid gap-2 mt-3 px-2 my-8'>
+				<ArticleLink text={frontmatter.category} href={'/cryptocurrency'} />
+				<ArticleTitle title={frontmatter.title} />
+				<Details
+					date={frontmatter.date}
+					author={frontmatter.author}
+					tags={frontmatter.tags}
+				/>
+			</div>
 		</div>
+		<div
+			className='markdown-content'
+			dangerouslySetInnerHTML={{ __html: marked(content) }}
+		></div>
+	</div>
 	);
 };
 

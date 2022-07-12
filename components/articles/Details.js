@@ -7,9 +7,9 @@ const Details = ({ date, author, tags }) => {
 				<li>{author}</li>
 				<li>0 Comments</li>
 			</ul>
-            <ul className="flex flex-wrap justify-items-start space-x-2 opacity-60">
+            <ul className="flex flex-wrap space-x-2 opacity-60 tracking-tighter ">
                 {tags.map(tag => (
-                    <li key={tag}>{tag}</li>
+                    <li key={tag}>{tag},</li>
                 ))}
             </ul>
 		</>

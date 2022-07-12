@@ -1,15 +1,16 @@
-import Layout from '../components/layout/Layout';
+import { FeaturedProvider } from '../components/contexts/FeaturedContext';
+import Layout from '../components/layouts/Layout';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<div className=''>
+		<FeaturedProvider>
 			<Layout>
-				<div className="px-7 mx-auto">
+				<div className='px-7 mx-auto'>
 					<Component {...pageProps} />
 				</div>
 			</Layout>
-		</div>
+		</FeaturedProvider> 
 	);
 }
 

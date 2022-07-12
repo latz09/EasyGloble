@@ -1,6 +1,6 @@
 import DropDownNav from './DropDownNav';
 import DropDownRoutes from './DropDownRoutes';
-import FullNav from './fullNav';
+import FullNav from './FullNav';
 import { useState } from 'react';
 
 const Navbar = () => {
