@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import { marked } from 'marked';
 
 const ArticlesPage = ({ frontmatter, slug, content }) => {
+    
 	return (
 		<div>
 			<h1>personal finance article page</h1>

@@ -3,14 +3,26 @@ import path from 'path';
 import matter from 'gray-matter';
 
 import Link from 'next/link';
+import SelectedCategoryArticles from '../../components/articles/article-layouts/SelectedCategoryArticles';
+import SideArticles from '../../components/articles/article-layouts/SideArticles';
+import Category from '../../components/utils.js/Category';
+import Heading from '../../components/utils.js/Heading';
 
-const cryptoCurrency = ({ articles }) => {	
-const article = (articles[0].slug)
+const cryptoCurrency = ({ articles }) => {
+	// const article = articles[0].slug;
 	return (
-		<div className='text-center mt-14'>
-			<h1>Crypto page</h1>
-			<Link href={`/articles/crypto-articles/${article}`}>article</Link>
-		</div>
+		<>
+			{' '}
+			<Heading title='Crypto Currency' />
+			<div className='grid gap-3 lg:grid-cols-3 mt-4'>
+				<div className='col-span-2'>
+					<SelectedCategoryArticles articles={articles} />
+				</div>
+				<div>
+					<SideArticles />
+				</div>
+			</div>
+		</>
 	);
 };
 
@@ -27,9 +39,10 @@ export async function getStaticProps() {
 
 		const { data } = matter(markdownWithMeta);
 
+		const details = { ...data, slug };
+
 		return {
-			slug,
-			data,
+			details,
 		};
 	});
 
@@ -41,3 +54,7 @@ export async function getStaticProps() {
 }
 
 export default cryptoCurrency;
+
+{
+	/* <Link href={`/articles/crypto/${article}`}>article</Link> */
+}

@@ -5,7 +5,7 @@ excerpt: 'For a generation of alienated techies, crypto’s all-for-one ethos wa
 author: 'Akash'
 cover_image: '/articleImages/crypto-5.webp'
 date: 'Jun 29. 2022'
-tags: ['cryptocurrency', 'cryptocurrency in india', 'cryptocurrency list', 'cryptocurrency news', 'cryptocurrency price',  ]
+tags: ['cryptocurrency', 'cryptocurrency in india',  'cryptocurrency news', 'cryptocurrency price',  ]
 ---
 
 For a generation of alienated techies, crypto’s all-for-one ethos was its biggest draw. Now panic is spreading across this universe — and that same ethos is posing what may be the biggest threat yet to its survival.

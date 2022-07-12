@@ -3,9 +3,9 @@ import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<div className='max-w-7xl mx-auto'>
+		<div className=''>
 			<Layout>
-				<div className="px-7">
+				<div className="px-7 mx-auto">
 					<Component {...pageProps} />
 				</div>
 			</Layout>
