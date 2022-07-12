@@ -8,13 +8,13 @@ import SelectedCategoryArticles from '../../components/articles/article-layouts/
 import FeaturedArticles from '../../components/articles/article-layouts/FeaturedArticles';
 
 const PersonalFinance = ({ articles }) => {
-	const {featuredArticles} = useContext(FeaturedContext);
-	
+	const { featuredArticles } = useContext(FeaturedContext);
+
 	return (
 		<>
 			<Heading title='Personal Finance' />
 			<div className='grid gap-3 lg:grid-cols-3 mt-4'>
-				<div className='col-span-2'>
+				<div className='lg:col-span-2'>
 					<SelectedCategoryArticles articles={articles} />
 				</div>
 				<div>

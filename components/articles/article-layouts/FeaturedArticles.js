@@ -7,7 +7,7 @@ const FeaturedArticles = ({ featuredArticles }) => {
 	return (
 		<div className='grid gap-5 md:ml-12'>
 			{featuredArticles.map((article) => (
-				<div key={article.details.slug} className="shadow">
+				<div key={article.details.slug}>
 					<FeaturedArticleItem
 						image={article.details.cover_image}
 						author={article.details.author}

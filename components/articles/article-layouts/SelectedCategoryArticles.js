@@ -2,7 +2,7 @@ import ArticleItem from '../ArticleItem';
 
 const SelectedCategoryArticles = ({ articles }) => {
 	return (
-		<div className='grid md:grid-cols-2 gap-2 md:gap-7  mx-auto justify-items-center'>
+		<div className='grid md:grid-cols-2 gap-7  mx-auto justify-items-center'>
 			{articles.map((article) => (
 				<div key={article.slug}>
 					<ArticleItem

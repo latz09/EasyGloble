@@ -12,8 +12,7 @@ const FeaturedArticleItem = ({
 	slug,
 	category,
 }) => {
-	const links = formatLinks(category, slug)
-	
+	const links = formatLinks(category, slug);
 
 	return (
 		<Link href={links.article}>

@@ -13,7 +13,7 @@ import { FeaturedContext } from '../../../components/contexts/FeaturedContext';
 const ArticlesPage = ({ frontmatter, slug, content }) => {
 	const { featuredArticles } = useContext(FeaturedContext);
 	return (
-		<div className="grid lg:grid-cols-3 gap-3 justif-items-center mt-4 md:mt-12">
+		<div className="grid lg:grid-cols-3 gap-3 justif-items-center md:mt-12">
 			<div className='grid shadow lg:col-span-2  sm:p-6'>
 				<div>
 					<ArticleImage

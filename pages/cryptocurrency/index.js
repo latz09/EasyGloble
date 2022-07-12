@@ -8,11 +8,7 @@ import { useEffect, useContext } from 'react';
 import { FeaturedContext } from '../../components/contexts/FeaturedContext';
 
 const CryptoCurrency = ({ articles }) => {
-	const { featuredArticles, setFeaturedArticles } = useContext(FeaturedContext);
-	
-	useEffect(() => { 
-		setFeaturedArticles(articles);
-	}, [articles, setFeaturedArticles]);
+	const { featuredArticles } = useContext(FeaturedContext);
 
 	return (
 		<>
